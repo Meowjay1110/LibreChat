@@ -51,6 +51,6 @@ COPY --from=data-provider-build /app/packages/data-provider/dist ./packages/data
 COPY --from=mcp-build /app/packages/mcp/dist ./packages/mcp/dist
 COPY --from=client-build /app/client/dist ./client/dist
 WORKDIR /app/api
-EXPOSE 3080
+EXPOSE 80
 ENV HOST=0.0.0.0
 CMD ["node", "server/index.js"]

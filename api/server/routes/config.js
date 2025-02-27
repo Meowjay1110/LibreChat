@@ -58,7 +58,7 @@ router.get('/', async function (req, res) {
         !!process.env.OPENID_SESSION_SECRET,
       openidLabel: process.env.OPENID_BUTTON_LABEL || 'Continue with OpenID',
       openidImageUrl: process.env.OPENID_IMAGE_URL,
-      serverDomain: process.env.DOMAIN_SERVER || 'http://localhost:3080',
+      serverDomain: process.env.DOMAIN_SERVER || 'http://localhost:80',
       emailLoginEnabled,
       registrationEnabled: !ldap?.enabled && isEnabled(process.env.ALLOW_REGISTRATION),
       socialLoginEnabled: isEnabled(process.env.ALLOW_SOCIAL_LOGIN),
